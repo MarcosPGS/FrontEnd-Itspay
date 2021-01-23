@@ -1,0 +1,40 @@
+<div class="titulo faixa">
+  <span>CHECK FÁCIL CPF/CNPJ</span>
+</div>
+
+<form [formGroup]="formulario" style="margin-top: var(--margen-top-form)">
+  <div class="formulario" style="margin-top: var(--margen-top-form)">
+    <mat-form-field appearance="outline" class="responsividade">
+      <mat-label>Validar... </mat-label>
+      <input matInput type="text" name="valor" formControlName="valor" mask="CPF_CNPJ" />
+      <mat-hint
+        ><small>
+          <mat-label style="color: red">*</mat-label
+          ><span style="font-size: 13px"
+            >Digite o <strong>CPF ou CNPJ </strong> para validar
+            informação.</span
+          >
+        </small></mat-hint
+      >
+      <!-- <mat-error  *ngIf="(formulario.get('nome').dirty && formulario.get('nome').touched) && formulario.get('nome').invalid || formulario.get('nome').hasError('required')">
+            Nome é obrigatório.
+    </mat-error> -->
+    </mat-form-field>
+  </div>
+</form>
+<div style="text-align: end">
+  <button
+    mat-raised-button
+    color="primary"
+    class="btn"
+    (click)="validarDados()"
+    [disabled]="formulario.invalid"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+
+<div style="text-align: center;">
+  <img src="../../../assets/img/imagemconsulta.png" alt="consulta">
+
+</div>

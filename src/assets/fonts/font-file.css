@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Futura LT Book";
+    src: url("./FuturaLT-Book.ttf") format("opentype");
+  }
+
+
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("./HelveticaNeue.ttf") format("opentype");
+  }

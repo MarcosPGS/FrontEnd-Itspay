@@ -1,0 +1,13 @@
+.cardVisualizar{
+    background-color: var( --cor-200);
+    color: var(--cor-padrao);
+    border-bottom: 5px solid var(--cor-accent);
+}
+
+
+@media screen and (max-width: 700px) {
+    .cardVisualizar{
+        margin-bottom: 30px;
+    }
+  }
+  

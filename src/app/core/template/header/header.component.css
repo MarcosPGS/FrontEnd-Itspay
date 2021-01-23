@@ -1,0 +1,9 @@
+.texto-header{
+    font-family: var( --fonte-padrao);
+}
+.header{
+    background-color: var(--cor-padrao);
+}
+.usuario-logado {
+    flex: 1 1 auto;
+  }

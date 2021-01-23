@@ -1,0 +1,85 @@
+<div class="titulo faixa">
+    <span>FATURAMENTO POR CLIENTE</span>
+  </div>
+
+  <div class="formulario" style="margin-top: var(--margen-top-form)">
+
+    <mat-form-field appearance="outline" class="responsividade2">
+      <mat-label>Pesquisar... </mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="nomeCliente"
+        (ngModelChange)="pesquisar()"
+      />
+      <mat-hint
+        ><small>
+          <mat-label style="color: red">*</mat-label
+          ><span style="font-size: 10px"
+            >Digite o nome do <strong>Cliente</strong> para filtrar a
+            informação.</span
+          >
+        </small></mat-hint
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="responsividade2">
+        <mat-label>Mês</mat-label>
+        <mat-select [(ngModel)]="mes" name="mes" (ngModelChange)="pesquisar()">
+          <mat-option *ngFor="let mes of meses" [value]="mes">
+            {{mes}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <div style="text-align: end" *ngIf="habilitarBotaoPesquisar">
+    <button
+      mat-raised-button
+      color="primary"
+      class="btn"
+      (click)="pesquisarServico()"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+
+  <div style="text-align: end; margin-top: 30px">
+    <a
+      mat-raised-button
+      color="accent"
+      class="btn"
+      href="/"
+    >
+      Voltar
+  </a>
+  </div>
+
+
+  <div class="formulario" style="margin-top: 30px;" *ngIf="mostrarCard == true">
+  <mat-card class="mat-elevation-z4 responsividade cardVisualizar">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{nome}}</mat-card-title>
+      <mat-card-subtitle>VALOR TOTAL DA FATURA: {{valorFatura | currency:'BRL'}}</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <p>
+        Prezado cliente será cobrado R$ 0.10 por cada requisição feita ao seu serviço de consulta
+      </p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+
+
+  <div class="formulario" style="margin-top: 30px;" *ngIf="mostrarCardVazio == true">
+    <mat-card class="mat-elevation-z4 responsividade cardVisualizar">    
+      <mat-card-content  style="text-align: center;">
+        <p>
+          Nenhum registro encontrado para o parâmetros informados, tente novamente.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    </div>
+
+ 

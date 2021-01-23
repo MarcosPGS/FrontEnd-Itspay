@@ -1,0 +1,16 @@
+.footer {
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-padrao);
+    z-index: 1;
+  }
+  .footer span {
+    font-weight: ( --fonte-regular);
+    color: var(--cor-caixa-branca);
+    font-size: var( --fonte-tamanho-padrao);
+    font-family: var(--fonte-padrao);
+  }
+  

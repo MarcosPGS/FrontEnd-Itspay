@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: "Futura LT Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  :root {
+    --cor-padrao: #1a237e;
+    --cor-caixa-branca: #ffffff;
+    --cor-200: #e8eaf6;
+    --cor-400: #5c6bc0;
+    --cor-cinza: #757575;
+    --cor-accent: rgb(252, 45, 129);
+    --cor-ciano: #00B2A0;
+    --cor-vermelha: #e96d82;
+  
+    --margens-laterais-container: 25px;
+  
+    /* Cores das fontes */
+    --cor-titulo-pagina: rgba(0, 0, 0, 0.54);
+    --cor-titulo-card: rgba(0, 0, 0, 0.87);
+    --cor-label: var(--cor-titulo-card);
+    --cor-descricao: var(--cor-titulo-card);
+    --cor-texto-input: var(--cor-titulo-pagina);
+    --cor-texto-input: var(--cor-titulo-card);
+  
+    /*Fonte padrão*/
+    --fonte-padrao: "Futura LT Book", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    --fonte-tamanho-padrao: 13px;
+  
+    /* Margens */
+    --margem-botao-padrao: 20px;
+    --margen-top-form: 30px;
+  
+    /* Peso das fontes */
+    --fonte-regular: 400;
+    --fonte-medium: 500;
+    --fonte-bold: 700;
+  }
+  .btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100px;
+   
+  }
+  span{
+    font-family: var(--fonte-padrao);
+  }
+  
+  .faixa {
+    margin-top: 30px;
+    border-bottom: 1px solid rgb(221, 218, 218);
+  }
+  .container{
+    padding: 0px 20px 20px 20px;
+  }
+  
+  .titulo {
+    color: var(--cor-padrao);
+    font-size: 16px;
+    font-weight: var(--fonte-regular);
+    font-family: var(--fonte-padrao);
+  }
+  .tituloModal{
+    font-weight: var(--fonte-regular);
+    font-family: var(--fonte-padrao);
+    color: var(--cor-padrao);
+  }
+  .input-cliente{
+    text-transform: uppercase;
+  }
+  .msg{
+    color: var(--cor-caixa-branca);
+     font-family: var(--fonte-padrao);
+  }
+  .msg-sucesso{
+    margin-top: 20px;
+      height: 40px;
+      background-color: var(--cor-ciano);
+  
+  }
+  
+  .msg-error{
+    margin-top: 20px;
+    height: 40px;
+    background-color: var(--cor-vermelha);
+  }
+  
+  
+  .input-uppercase{
+    text-transform: uppercase;
+  }
+  .input-form{
+    margin-right: 15px;
+  }
+  .formulario{
+  display: flex;
+  }
+  
+  .responsividade{
+  width: 100%;
+  }
+  .responsividade1{
+  width: 33.33%;
+  }
+  
+  .responsividade2{
+  width: 50%;
+  margin-right: 15px;
+  }
+  
+  @media screen and (max-width: 700px) {
+  .formulario {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  .responsividade{
+      width: auto;
+  }
+  
+  .responsividade1{
+      width: auto;
+  }
+  
+  .responsividade2{
+      width: auto;
+  }
+  }
